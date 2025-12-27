@@ -1,0 +1,179 @@
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{ font-family:"Segoe UI", Arial, sans-serif;  }
+
+/* NAVBAR */
+.navbar{
+  position:fixed; top:0; left:0; right:0;
+  padding:14px 32px;
+  height: 60px;
+  background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,0));
+  backdrop-filter: blur(2px);
+  z-index:100;
+  background-color: gray;
+}
+.nav-inner{
+  max-width:900px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:28px;
+  justify-content: space-between;  /* 🔥 головне */
+}
+.brand{
+  text-decoration:none; font-weight:700; letter-spacing:.5px;
+  color:#ffffffd9; font-size:22px;
+}
+
+/* Верхнє меню */
+.menu{ list-style:none; display:flex; gap:34px; align-items:center; }
+.menu > li{ position:relative; }
+.menu > li > a{
+  text-decoration:none; color:rgba(255,255,255,.85);
+  font-weight:600; padding:6px 2px; position:relative;
+  transition:color .25s ease;
+}
+.menu > li > a:hover{ color:#fff; }
+
+/* помаранчева лінія справа-наліво */
+.menu > li > a::before{
+  content:""; position:absolute; bottom:-6px; right:0; height:2px; width:0;
+  background:orange; transition:width .25s ease;
+}
+.menu > li:hover > a::before{ width:100%; }
+
+/* Стрілочка для пунктів з підменю */
+.dropdown > a::after{
+  content:"▾"; margin-left:6px; font-size:.8em; opacity:.7;
+}
+
+/* Панель підменю */
+.dropdown-panel{
+  position:absolute; top: calc(100% + 10px); left:-10px;
+  min-width:260px; padding:14px 16px;
+  background:rgba(25,20,16,.92);
+  border-radius:12px;
+  box-shadow:0 14px 32px rgba(0,0,0,.35);
+  opacity:0; transform:translateY(8px);
+  visibility:hidden; pointer-events:none;
+  transition:opacity .2s ease, transform .2s ease, visibility .2s;
+  z-index:20;
+}
+.dropdown:hover .dropdown-panel{
+  opacity:1; transform:translateY(0);
+  visibility:visible; pointer-events:auto;
+}
+.dropdown-panel ul{ list-style:none; }
+.dropdown-panel li + li{ margin-top:10px; }
+
+.dropdown-panel a{
+  display:block; color:rgba(255,255,255,.92);
+  text-decoration:none; padding:6px 8px; border-radius:8px;
+  position:relative; transition:background-color .2s ease, color .2s ease;
+}
+.dropdown-panel a:hover{
+  background:rgba(255,255,255,.06); color:#fff;
+}
+/* невелика помаранчева рисочка всередині елемента */
+.dropdown-panel a::after{
+  content:""; position:absolute; right:14px; bottom:6px;
+  height:2px; width:0; background:orange; transition:width .25s ease;
+}
+.dropdown-panel a:hover::after{ width:40%; }
+
+/* Адаптив (опційно) */
+@media (max-width:920px){
+  .nav-inner{ justify-content:space-between; }
+  .menu{ gap:18px; }
+}
+
+/* Головний блок */
+.hero {
+    height: 100vh;
+    background-color: aqua; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+/* Профіль справа */
+.profile {
+  position: relative;
+  height: 20px;
+  width: 5%;
+  margin-left: auto;          /* 🔥 притискає блок до правого краю */
+  display: flex;
+  align-items: center;
+  margin-top: -20px;
+}
+
+.profile-icon {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.profile-icon svg {
+  transition: 0.2s;
+}
+
+.profile-icon:hover svg {
+  stroke: #c49a6c;
+}
+
+/* Випадаюче меню профілю */
+.profile-menu {
+  position: absolute;
+  right: 0;
+  top: 120%;
+  background: rgba(25,20,16,.96);
+  padding: 10px 0;
+  border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0 14px 32px rgba(0,0,0,.4);
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: 0.2s ease;
+}
+
+.profile-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-menu li a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #f5f5f5;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.profile-menu li a:hover {
+  background: rgba(255,255,255,.08);
+}
+
+/* показ меню при наведенні */
+.profile:hover .profile-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}

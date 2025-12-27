@@ -1,0 +1,108 @@
+.admin-products-page {
+  max-width: 1200px;
+  margin: 30px auto;
+  margin-top: 70px;
+  padding: 0 20px;
+  color: #f5f5f5;
+}
+
+.admin-products-page h1 {
+  margin-bottom: 20px;
+}
+
+.admin-error {
+  background: #c62828;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Форма */
+.admin-form {
+  background: #181818;
+  border-radius: 10px;
+  border: 1px solid #333;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.admin-form h2 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 20px;
+  margin-bottom: 14px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field.full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+.form-field input,
+.form-field textarea {
+  background: #111;
+  border-radius: 6px;
+  border: 1px solid #444;
+  padding: 8px 10px;
+  color: #f5f5f5;
+  font-size: 14px;
+}
+
+.btn-primary {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Список товарів */
+.admin-products-list {
+  background: #181818;
+  border-radius: 10px;
+  border: 1px solid #333;
+  padding: 20px 24px;
+}
+
+.admin-product-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+}
+
+.admin-product-row:last-child {
+  border-bottom: none;
+}
+
+.row-main {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.btn-danger {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #e53935;
+  color: #fff;
+  cursor: pointer;
+}

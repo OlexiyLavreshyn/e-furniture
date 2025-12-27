@@ -1,0 +1,165 @@
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{ font-family:"Segoe UI", Arial, sans-serif;  }
+background-color: #BEBEBE !important;
+
+.MainPageBG{
+  background-color: #BEBEBE;
+  width: 100%;
+  height: 100vh;
+}
+
+.MainPage{
+    background-image: url('../assets/1photo_2025-08-14_23-05-19.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+}
+
+.TopSlider{
+  position: relative;
+  width: 100%;
+}
+
+
+#TopSale{
+    color: orange;
+    margin-top: 700px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    padding: 30px;
+}
+
+
+
+.slider {
+  width: 80%;
+  max-width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 20px;
+  border-color: white;
+}
+
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: margin-left 0.6s ease;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.s1 {
+  background-image: url('../assets/2photo_2025-08-14_23-12-18.jpg');
+}
+
+.s2 {
+  background-image: url('../assets/1photo_2025-08-14_23-05-19.jpg');
+  background-position: 87%;
+}
+
+.s3 {
+  background-image: url('../assets/3photo_2025-08-14_23-15-52.jpg');
+    background-position: 6%;
+
+}
+
+.s2,
+.s3 {
+  background-size: contain;          /* побачиш все фото, але з'являться поля збоку/зверху */
+  background-color: #000;            /* фон за картинкою, щоб не було дірок */
+}
+
+
+
+/* Навігація */
+.nav-manual {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.manual-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  background: rgba(255,255,255,0.4);
+}
+
+/* Перемикання */
+#slide1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .s1 {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ .s1 {
+  margin-left: -200%;
+}
+.advantages {
+  padding: 40px 80px;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 32px;
+}
+
+.adv-card {
+  display: flex;
+  gap: 20px;
+  padding: 24px 28px;
+  background: #14191f;
+  border-radius: 26px;
+  border: 1px solid #1f2833;
+}
+
+.adv-icon {
+  font-size: 42px;
+  color: #0085ff;
+}
+
+.adv-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.adv-text {
+  margin: 0;
+  font-size: 14px;
+  color: #cfd6e0;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+}

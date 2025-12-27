@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.*    # ignore any other env variants
+
+# Build output
+dist/
+build/
+**/dist/
+**/build/
+
+# Docker
+*.dockerfile
+docker-compose.override.yml
+**/Dockerfile
+**/docker-compose.override.yml
+
+# VSCode
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+
+# Optional: ignore coverage if using testing
+coverage/
+**/coverage/

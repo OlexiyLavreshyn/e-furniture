@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "amqplib": "^0.10.9",
+    "mysql2": "^3.15.3"
+  }
+}

@@ -1,0 +1,161 @@
+/* Головний блок ордеру */
+.order-page {
+  max-width: 1000px;
+  margin: 50px auto 40px;
+  padding: 24px 280px 24px 24px;        /* великий правий відступ під картинку */
+  background: #15181d;
+  border-radius: 24px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
+  margin-top: 100px;
+
+  /* 🖼 Картинка праворуч */
+  background-image: url("../assets/order-illustration.png"); /* постав свій шлях */
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 260px auto;
+  box-sizing: border-box;
+}
+
+/* заголовки */
+.order-title {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.order-subtitle {
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+/* блоки */
+.order-row,
+.order-block {
+  margin-bottom: 16px;
+  color: #e1e5ef;
+}
+
+/* чекбокс */
+.order-toggle-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* поля адреси */
+.order-address-card {
+  border: 1px solid #2a2f3a;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: #181c24;
+}
+
+.order-address-label {
+  cursor: pointer;
+}
+
+.order-address-radio {
+  margin-right: 8px;
+}
+
+.order-address-street {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.order-address-meta {
+  font-size: 13px;
+  color: #b7bdc9;
+}
+
+/* інпути */
+.order-field-row {
+  margin-bottom: 8px;
+}
+
+.order-field-row--two {
+  display: flex;
+  gap: 8px;
+}
+
+.order-input {
+  flex: 1;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #2a2f3a;
+  background: #181c24;
+  color: #ffffff;
+}
+
+.order-input::placeholder {
+  color: #707784;
+}
+
+.order-input-full {
+  width: 100%;
+}
+
+/* селект */
+.order-select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #2a2f3a;
+  background: #181c24;
+  color: #ffffff;
+}
+
+/* помилка */
+.order-error {
+  color: #ff5a5f;
+  margin-bottom: 12px;
+}
+
+/* кнопки */
+.order-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.order-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+}
+
+/* основна кнопка */
+.order-btn-primary {
+  background: #2b8aef;
+  color: #fff;
+}
+
+.order-btn-primary:hover:not(:disabled) {
+  background: #2072c9;
+}
+
+.order-btn-primary:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* вторинна кнопка */
+.order-btn-secondary {
+  background: #2a2d33;
+  border: 1px solid #444a55;
+  color: #ffffff;
+}
+
+.order-btn-secondary:hover {
+  background: #25292f;
+}
+
+/* 🔻 Адаптив: на мобілці прибираємо картинку і робимо звичайний блок */
+@media (max-width: 900px) {
+  .order-page {
+    padding: 20px;
+    background-image: none;
+  }
+}

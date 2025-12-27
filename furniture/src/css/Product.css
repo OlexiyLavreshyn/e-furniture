@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.product-page {
+  padding: 40px 60px;
+  color: #f5f5f5;
+  margin-top: 50px;
+  background-color: #BEBEBE;
+
+}
+
+/* Верхній блок */
+.product-layout {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Ліва колонка (фото) */
+.product-left {
+  width: 50%;
+}
+
+.product-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.product-name-under-img {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Права колонка */
+.product-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.product-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.product-article {
+  font-size: 14px;
+  color: #bcbcbc;
+}
+
+.product-price {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.delivery-link {
+  margin-top: 4px;
+  background: none;
+  border: none;
+  color: #d0d0d0;
+  text-decoration: underline;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Рядки (колір, кількість) */
+.product-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.row-label {
+  width: 100px;
+  font-size: 15px;
+}
+
+.row-value {
+  font-size: 15px;
+}
+
+.color-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #666;
+  background: #444; /* або підлаштовуй під good.color */
+}
+
+/* Кількість */
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #666;
+  background: transparent;
+  color: #f5f5f5;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.qty-value {
+  min-width: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Кнопки */
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.add-to-cart {
+  flex: 0 0 220px;
+  padding: 12px 0;
+  border-radius: 4px;
+  border: none;
+  background: #d3c19b;
+  color: #111;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buy-now {
+  flex: 0 0 160px;
+  padding: 12px 0;
+  border-radius: 4px;
+  border: 1px solid #d3c19b;
+  background: transparent;
+  color: #d3c19b;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.wishlist-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #d3c19b;
+  background: transparent;
+  color: #d3c19b;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Нижній блок (опис + габарити) */
+.product-bottom {
+  display: flex;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.bottom-left,
+.bottom-right {
+  width: 50%;
+}
+
+.bottom-left h2,
+.bottom-right h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.bottom-left p,
+.bottom-right p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Адаптив */
+@media (max-width: 1000px) {
+  .product-layout {
+    flex-direction: column;
+  }
+
+  .product-left,
+  .product-right {
+    width: 100%;
+  }
+
+  .product-bottom {
+    flex-direction: column;
+  }
+
+  .bottom-left,
+  .bottom-right {
+    width: 100%;
+  }
+}
