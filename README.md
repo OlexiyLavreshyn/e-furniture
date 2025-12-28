@@ -38,11 +38,15 @@ Git & GitHub
 
 Environment variables (.env)
 
+
+
 Running with Docker
 
 If using Docker Compose:
 
 docker-compose up --build
+
+
 
 Notes
 
